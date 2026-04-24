@@ -180,16 +180,20 @@ if __name__ == "__main__":
     description = """
     Read SuttaCentral suttas in the terminal.
     
-    Common Collection Codes:
-    dn  - Digha Nikaya (Long)
-    mn  - Majjhima Nikaya (Middle)
-    sn  - Samyutta Nikaya (Linked)
-    an  - Anguttara Nikaya (Numbered)
-    kp  - Khuddakapatha
-    dhp - Dhammapada
-    ud  - Udana
-    iti - Itivuttaka
-    snp - Sutta Nipata
+    Collection IDs (Semantic):
+    dn  - Digha Nikaya (Long)        mn  - Majjhima Nikaya (Middle)
+    sn  - Samyutta Nikaya (Linked)   an  - Anguttara Nikaya (Numbered)
+    kp  - Khuddakapatha              dhp - Dhammapada
+    ud  - Udana                      iti - Itivuttaka
+    snp - Sutta Nipata               thig- Therigatha
+    thag- Theragatha                 vv  - Vimanavatthu
+    pv  - Petavatthu                 da  - Dirgha Agama (Chinese)
+    ma  - Madhyama Agama (Chinese)   sa  - Samyukta Agama (Chinese)
+    
+    Referencing (from suttacentral.net/numbering):
+    - Primary IDs are semantic (e.g., 'dn1').
+    - Segment IDs for precise sections (e.g., 'dn1:10.1').
+    - Pali Nikayas follow Mahasangiti numbering.
     """
     parser = argparse.ArgumentParser(description=description, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("id", help="Sutta ID (e.g., dn1, mn10, sn56.11)")
